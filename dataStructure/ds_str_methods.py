@@ -1,4 +1,4 @@
-name="Swaroop"
+name = "Swaroop"
 
 if name.startswith("Swa"):
     print("Yes, the string starts with 'Swa'")
@@ -6,11 +6,10 @@ if name.startswith("Swa"):
 if "roop" in name:
     print("Yes, it contains the string 'roop'")
 
-if name.find("war")!=-1:
+if name.find("war") != -1:
     print("Yes, it contains the string 'war'")
 
-delimiter="_*_"
+delimiter = "_*_"
 
-mylist=['Brazil',"Russia","India","China"]
+mylist = ['Brazil', "Russia", "India", "China"]
 print(delimiter.join(mylist))
-

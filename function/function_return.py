@@ -1,10 +1,11 @@
-def max(x,y):
-    if x>y:
+def max(x, y):
+    if x > y:
         return x
-    elif x==y:
+    elif x == y:
         return "The numbers are equal"
     else:
         return y
 
-print(max(2,3))
-print(max(2,2))
+
+print(max(2, 3))
+print(max(2, 2))

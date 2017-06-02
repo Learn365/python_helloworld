@@ -21,13 +21,17 @@ target_dir = 'C:\\Users\\baker\\Documents\\Development\\python\\helloworld\\back
 # Remember to change this to which folder you will be using
 
 # 3. The files are backed up into a zip file.
-# 4. The name of the zip archive is the current date and time
-target = target_dir + os.sep + \
-    time.strftime('%Y%m%d%H%M%S') + '.zip'
+# 4. The current date is the name of the subdirectory
+# in the main directory
+today = target_dir + os.sep + time.strftime("%Y%m%d")
+# the current time is the name of the zip archive
+now = time.strftime("%H%M%S")
 
-# Create target directory if it is not present
-if not os.path.exists(target_dir):
-    os.makedirs(target_dir)  # make directory
+target = today + os.sep + now + '.zip'
+
+# Create subdirectory if it isn't already there
+if not os.path.exists(today):
+    os.makedirs(today)  # make directory
 
 # 5. We use the zip command to put the files in a zip archive
 zip_command = "zip -r {0} {1}".format(target, ' '.join(source))
